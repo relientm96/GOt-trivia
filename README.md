@@ -1,6 +1,8 @@
 # GOt-trivia
 
-Simple golang program that polls [Open Trivia Database](https://opentdb.com/) for multiple choice type trivia questions and answers.
+Simple golang program game for trivia questions and answers.
+
+Questions and answers taken from the [Open Trivia Database](https://opentdb.com/).
 
 ## Usage
 
