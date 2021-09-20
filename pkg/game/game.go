@@ -39,19 +39,28 @@ func (s *GameService) Start(triviaResponse trivia.TriviaResponse) {
 }
 
 func handleQuestion(triviaResult trivia.TriviaResult, answers []string, corectIndex int) error {
-	fmt.Print("Enter selection: ")
 	var input string
-	fmt.Scanln(&input)
+	var selectedByUser int
+	for {
+		fmt.Print("Enter selection: ")
+		fmt.Scanln(&input)
 
-	selectedByUser, err := strconv.Atoi(input)
-	if err != nil {
-		return err
+		parsedInput, err := strconv.Atoi(input)
+		if err != nil {
+			return err
+		}
+
+		if parsedInput < len(answers) && parsedInput >= 0 {
+			selectedByUser = parsedInput
+			// User has successfully selected a legitimate selection
+			break
+		}
 	}
 
 	if corectIndex == selectedByUser {
 		fmt.Println("Good Job!")
 	} else {
-		fmt.Printf("Wrong Answer! The answer is %d), %s \n", corectIndex, answers[corectIndex])
+		fmt.Printf("Wrong Answer! The answer is %d) - %s \n", corectIndex, answers[corectIndex])
 	}
 
 	return nil
