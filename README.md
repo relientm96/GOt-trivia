@@ -10,11 +10,11 @@ Simple golang program that polls [Open Trivia Database](https://opentdb.com/) fo
 
 ```bash
 Usage of ./main:
-  -amount string
+  -amount string (optional)
         number of trivia questions (default "1")
-  -difficulty string
+  -difficulty string (optional)
         easy/medium/hard
-  -type string
+  -type string (optional)
         boolean/multiple
 ```
 
