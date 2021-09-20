@@ -20,11 +20,12 @@ Usage of ./main:
         boolean/multiple
 ```
 
-## Play the Game!
+## Play the Game
 
 ```bash
 # Build binary
-go build cmd/GOt-trivia/main
+go build cmd/GOt-trivia/main.go
 
+# Run the game
 ./main -amount <amount> -difficulty <difficulty> -type <type>
 ```

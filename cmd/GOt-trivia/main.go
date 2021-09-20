@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/relientm96/GOt-trivia/pkg/formatter"
+	"github.com/relientm96/GOt-trivia/pkg/game"
 	"github.com/relientm96/GOt-trivia/pkg/trivia"
 )
 
@@ -29,6 +29,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	formatterService := formatter.NewService()
-	formatterService.PrintTrivias(*triviaResponse)
+	gameService := game.NewService()
+	gameService.Start(*triviaResponse)
 }
