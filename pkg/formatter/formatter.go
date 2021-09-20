@@ -32,7 +32,7 @@ func (s *FormatterService) PrintTrivias(triviaResponse trivia.TriviaResponse) {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println("----------------------------")
+		fmt.Printf("------------------------\n\n")
 	}
 }
 
