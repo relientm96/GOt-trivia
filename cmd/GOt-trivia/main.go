@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 
 	"github.com/relientm96/GOt-trivia/pkg/formatter"
@@ -8,13 +9,19 @@ import (
 )
 
 func main() {
-	triviaService := trivia.NewService()
+	amount := flag.String("amount", "1", "number of trivia questions")
+	difficulty := flag.String("difficulty", "", "easy/medium/hard")
+	triviaType := flag.String("type", "", "boolean/multiple")
+
+	flag.Parse()
 
 	query := trivia.TriviaQuery{
-		Amount:     1,
-		Difficulty: "Hard",
-		TriviaType: "multiple",
+		Amount:     *amount,
+		Difficulty: *difficulty,
+		TriviaType: *triviaType,
 	}
+
+	triviaService := trivia.NewService()
 	fetchUrl := triviaService.ConstructQuery(query)
 
 	triviaResponse, err := triviaService.FetchTrivias(fetchUrl)

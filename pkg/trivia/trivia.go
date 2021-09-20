@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"strconv"
 	"strings"
 )
 
@@ -24,8 +23,8 @@ func NewService() *TriviaService {
 func (s *TriviaService) ConstructQuery(query TriviaQuery) string {
 	urlWithQuery := baseURL
 
-	if query.Amount != 0 {
-		urlWithQuery = fmt.Sprintf("%samount=%s", urlWithQuery, strconv.Itoa(query.Amount))
+	if query.Amount != "" {
+		urlWithQuery = fmt.Sprintf("%samount=%s", urlWithQuery, strings.ToLower(query.Amount))
 	}
 
 	if query.Difficulty != "" {

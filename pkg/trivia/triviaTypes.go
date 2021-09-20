@@ -2,7 +2,7 @@ package trivia
 
 type TriviaResult struct {
 	Category          string   `json:"category"`
-	Type              string   `json:"multiple"`
+	Type              string   `json:"type"`
 	Difficulty        string   `json:"difficulty"`
 	Question          string   `json:"question"`
 	Correct_answer    string   `json:"correct_answer"`
@@ -15,7 +15,7 @@ type TriviaResponse struct {
 }
 
 type TriviaQuery struct {
-	Amount     int
+	Amount     string
 	Difficulty string
 	TriviaType string
 }
