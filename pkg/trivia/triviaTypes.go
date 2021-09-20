@@ -13,3 +13,9 @@ type TriviaResponse struct {
 	Response_code int            `json:"response_code"`
 	Results       []TriviaResult `json:"results"`
 }
+
+type TriviaQuery struct {
+	Amount     int
+	Difficulty string
+	TriviaType string
+}
