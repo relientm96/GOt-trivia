@@ -20,7 +20,7 @@ Usage of ./main:
         boolean/multiple
 ```
 
-## Running
+## Play the Game!
 
 ```bash
 # Build binary
