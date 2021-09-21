@@ -4,12 +4,23 @@ Simple golang program game for trivia questions and answers.
 
 Questions and answers taken from the [Open Trivia Database](https://opentdb.com/).
 
+## Install
+
+Either download the compiled binaries in the release, or manually compile them with the following make commands:
+```bash
+# Compile for Windows
+make compile-windows
+
+# Compile for Linux
+make compile-linux
+
+# Compile for MacOS
+make compile-darwin
+```
+
 ## Play the Game
 
 ```bash
-# Build binary
-go build cmd/GOt-trivia/main.go
-
 # Play with 10 questions
 ./main -amount 10
 
