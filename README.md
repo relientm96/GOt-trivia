@@ -7,6 +7,7 @@ Questions and answers taken from the [Open Trivia Database](https://opentdb.com/
 ## Install
 
 Either download the compiled binaries in the release, or manually compile them with the following make commands:
+
 ```bash
 # Compile for Windows
 make compile-windows
